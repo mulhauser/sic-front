@@ -1,0 +1,75 @@
+/*.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  //   background-color: lightgray;
+  //   flex: 0 0 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(206, 201, 201);
+  //opacity: 50%;
+}
+
+img {
+  width: 150px;
+  height: 100%;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+h2 {
+  color: #000;
+  font: normal 24px/1 "GothamRoundedMedium", sans-serif;
+  padding-right: 10px;
+}
+
+.details {
+  flex: 0 0 20%;
+}
+
+.fiche-medicale {
+  flex: 0 0 20%;
+}
+
+.autres {
+  flex: 0 0 20%;
+}
+*/
+
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.header-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: lightgray;
+  height: 20vh;
+}
+
+.header-card-avatar {
+  background-image: url("https://eu.ui-avatars.com/api/?name=John+Doe&background=fff&color=009688");
+  background-size: cover;
+  margin: 10px;
+  height: 40px;
+}
+
+.summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.small-btn-test {
+  min-width: 1%;
+}
+
+.summary-type {
+  border-bottom: thin solid #dae0e2;
+}

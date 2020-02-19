@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-header>
+    PERSONNELLES
+  </mat-card-header>
+  <mat-card-content>
+    <ul>
+      <li class="flex-container">
+        <mat-icon>person</mat-icon>
+        {{ profile.firstname }} {{ profile.lastname }}
+      </li>
+      <li class="flex-container">
+        <mat-icon>place</mat-icon>
+        {{ profile.address.street }}, {{ profile.address.postal_code }}
+        {{ profile.address.city }}
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-header>
+    MEDICALES
+  </mat-card-header>
+  <mat-card-content>
+    <ul>
+      <li class="flex-container">
+        <mat-icon>opacity</mat-icon>
+        {{ profile.blood }}
+      </li>
+      <ul>
+        <li class="flex-container" *ngFor="let allergy of profile.allergies">
+          <mat-icon>block</mat-icon>
+          {{ allergy.name }}
+        </li>
+      </ul>
+      <ul>
+        <li class="flex-container" *ngFor="let drug of profile.drugs">
+          <mat-icon>healing</mat-icon>
+          {{ drug.name }}
+        </li>
+      </ul>
+    </ul>
+  </mat-card-content>
+</mat-card>

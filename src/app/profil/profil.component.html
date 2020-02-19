@@ -1,0 +1,63 @@
+<!-- <div class="container">
+  <div class="header">
+    <img src="assets/profil.png" />
+    <h2>Rémy Mulhauser</h2>
+  </div>
+  <div class="details">Details</div>
+  <div class="fiche-medicale">Fiche médicale</div>
+  <div class="autres">Autres</div>
+</div> -->
+
+<mat-card class="header-container">
+  <mat-card-header class="header-container">
+    <div mat-card-avatar class="header-card-avatar"></div>
+    <mat-card-title>
+      {{ profile.firstname }} {{ profile.lastname }}
+    </mat-card-title>
+  </mat-card-header>
+</mat-card>
+<mat-accordion>
+  <mat-expansion-panel class="summary-type">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Fiche médicale
+      </mat-panel-title>
+      <!--mat-panel-description>
+        Type your name and age
+      </mat-panel-description-->
+    </mat-expansion-panel-header>
+    <div class="summary">
+      <p align="left">
+        {{ profile.firstname }} {{ profile.lastname }}, {{ profile.height }} cm,
+        {{ profile.weight }} kg
+      </p>
+      <button class="small-btn-test" mat-raised-button routerLink="/carnet">
+        Details
+      </button>
+    </div>
+  </mat-expansion-panel>
+  <mat-expansion-panel
+    class="summary-type"
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Dons
+      </mat-panel-title>
+      <!--mat-panel-description>
+        Currently I am {{panelOpenState ? 'open' : 'closed'}}
+      </mat-panel-description-->
+    </mat-expansion-panel-header>
+    <div class="summary">
+      <p align="left">
+        I'm visible because I am open <br />
+        Second line
+      </p>
+      <!-- <mat-chip routerLink="carnet" color="primary">Details</mat-chip> -->
+      <button class="small-btn-test" mat-raised-button routerLink="/dons">
+        Details
+      </button>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
